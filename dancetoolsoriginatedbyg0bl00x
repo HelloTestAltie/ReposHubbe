@@ -1754,6 +1754,7 @@ tool.Unequipped:Connect(function()
     print("Dance 35 and music stopped")
 end)
 
+writefile("Hood Irony.mp3", game:HttpGet("https://github.com/HelloTestAltie/ReposHubbe/raw/refs/heads/Sounds/Hood%20Irony.mp3"))
 local tool = Instance.new("Tool")
 tool.Name = "Hood Irony Walk🥀"
 tool.RequiresHandle = false
