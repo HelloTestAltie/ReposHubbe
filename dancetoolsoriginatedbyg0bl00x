@@ -1777,6 +1777,12 @@ tool.Equipped:Connect(function()
             Anim:Play()
         end)
     end
+    sound = Instance.new("Sound")
+    sound.SoundId = getcustomasset("Hood Irony.mp3")
+    sound.Volume = 2
+    sound.Looped = true
+    sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+    sound:Play()
 end)
 
 tool.Unequipped:Connect(function()
@@ -1788,4 +1794,5 @@ tool.Unequipped:Connect(function()
         sound:Stop()
         sound:Destroy()
     end
+    print("Dance 36 and music stopped")
 end)
