@@ -1871,6 +1871,6 @@ tool.Unequipped:Connect(function()
         sound:Stop()
         sound:Destroy()
     end
-    print("Custom 2 stopped")
+    print("Custom 3 stopped")
 end)
 
