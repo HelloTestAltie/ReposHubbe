@@ -1874,3 +1874,40 @@ tool.Unequipped:Connect(function()
     print("Custom 3 stopped")
 end)
 
+-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "The chicken nugget dance!"
+tool.RequiresHandle = false
+tool.Parent = backpack
+
+-- Load Animator if not already loaded
+if not getgenv()["Animator"] then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
+    end
+
+local Anim = nil
+local sound = nil
+
+tool.Equipped:Connect(function()
+    local character = player.Character
+    if character then
+        Anim = Animator.new(character, 120175576445277)
+        Anim:Play()
+        Anim.Stopped:Connect(function()
+            Anim:Play()
+        end)
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    if Anim then
+        Anim:Stop()
+        Anim:Destroy()
+    end
+    if sound then
+        sound:Stop()
+        sound:Destroy()
+    end
+    print("Custom 3 stopped")
+end)
+
