@@ -1756,7 +1756,7 @@ end)
 
 -- Create the tool
 local tool = Instance.new("Tool")
-tool.Name = "big dih💔"
+tool.Name = "Jerk offe🤑🤑🤑"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
@@ -1790,6 +1790,12 @@ tool.Unequipped:Connect(function()
     end
     print("Custom 1 stopped")
 end)
+
+-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "big dih💔"
+tool.RequiresHandle = false
+tool.Parent = backpack
 
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
