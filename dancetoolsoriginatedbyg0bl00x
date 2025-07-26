@@ -1754,11 +1754,13 @@ tool.Unequipped:Connect(function()
     print("Dance 35 and music stopped")
 end)
 
+-- Create the tool
 local tool = Instance.new("Tool")
-tool.Name = "Hood Irony Walk🥀"
+tool.Name = "Junk off🤑🤑"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Pretty Princess Theme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Pretty%20Princess%20Theme.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1770,7 +1772,7 @@ local sound = nil
 tool.Equipped:Connect(function()
     local character = player.Character
     if character then
-        Anim = Animator.new(character, 93083089438312)
+        Anim = Animator.new(character, 75842775230843)
         Anim:Play()
         Anim.Stopped:Connect(function()
             Anim:Play()
@@ -1787,4 +1789,6 @@ tool.Unequipped:Connect(function()
         sound:Stop()
         sound:Destroy()
     end
+    print("Custom 1 stopped")
 end)
+
