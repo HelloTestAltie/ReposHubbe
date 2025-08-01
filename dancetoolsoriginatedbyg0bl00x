@@ -1911,3 +1911,43 @@ tool.Unequipped:Connect(function()
     print("Custom 3 stopped")
 end)
 
+local tool = Instance.new("Tool")
+tool.Name = "squidward yell 4"
+tool.RequiresHandle = false
+tool.Parent = backpack
+
+        writefile("yell4.mp3", game:HttpGet("https://github.com/HelloTestAltie/ReposHubbe/raw/refs/heads/main/Squidward%20yell%204.mp3"))
+if not getgenv()["Animator"] then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
+    end
+
+local Anim = nil
+local sound = nil
+
+tool.Equipped:Connect(function()
+    local character = player.Character
+    if character then
+            Anim = Animator.new(character, 110213525101653)
+        Anim:Play()
+        Anim.Stopped:Connect(function()
+            Anim:Pause()
+        end)
+        sound = Instance.new("Sound")
+        sound.SoundId = getcustomasset("yell4.mp3")
+        sound.Volume = 2
+        sound.Looped = true
+        sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+        sound:Play()
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    if Anim then
+        Anim:Stop()
+        Anim:Destroy()
+    end
+    if sound then
+        sound:Stop()
+        sound:Destroy()
+    end
+end)
